@@ -1,0 +1,6 @@
+context_path: free_parking_to.run.ProjectContext
+project_name: "free_parking_to"
+project_version: "0.16.6"
+package_name: "free_parking_to"
+hooks:
+  - free_parking_to.hooks.project_hooks
