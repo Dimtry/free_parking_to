@@ -30,13 +30,15 @@
 from pathlib import Path
 
 from kedro.framework.context import KedroContext, load_package_context
-
+from free_parking_to.pipeline import create_pipeline
 
 class ProjectContext(KedroContext):
     """Users can override the remaining methods from the parent class here,
     or create new ones (e.g. as required by plugins)
     """
 
+    def _get_pipeline(self, name: str = None) -> Pipeline:
+        return create_pipeline()
 
 def run_package():
     # Entry point for running a Kedro project packaged with `kedro package`
