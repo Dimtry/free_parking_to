@@ -1,8 +1,8 @@
-
+from typing import Dict
 from kedro.pipeline import Pipeline
-from free_parking_to.data_engineering import pipeline as de
+from free_parking_to.pipelines.data_engineering import pipeline as de
 
-def create_pipeline(**kwargs):
+def create_pipeline(**kwargs) -> Dict[str, Pipeline]:
 
     de_pipeline = de.create_pipeline()
 

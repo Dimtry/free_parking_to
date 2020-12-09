@@ -1,1 +1,2 @@
-
+xml_url : "https://ckan0.cf.opendata.inter.prod-toronto.ca/api/3/action/package_show"
+xml_input : { "id": "72040958-e532-46f7-9228-8d07b4677a2b"}

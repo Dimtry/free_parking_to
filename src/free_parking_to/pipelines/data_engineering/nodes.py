@@ -57,7 +57,7 @@ def str_cleaning_area_between(string):
     return string
 
 
-def import_dataset():
+def import_dataset(xml_url, xml_input):
 
     '''
     This pulls in and processes the raw dataset directly from the toronto open data platform
@@ -65,8 +65,8 @@ def import_dataset():
     :return:
     '''
 
-    url = "https://ckan0.cf.opendata.inter.prod-toronto.ca/api/3/action/package_show"
-    params = { "id": "72040958-e532-46f7-9228-8d07b4677a2b"}
+    url = xml_url
+    params = xml_input
     response = urllib.request.urlopen(url, data=bytes(json.dumps(params), encoding="utf-8"))
     package = json.loads(response.read())
 
@@ -115,3 +115,6 @@ def import_dataset():
     raw_df['end_zone'] = split_zones.apply(lambda x: parking_zones(x)[1])
 
     return raw_df
+
+def testing():
+    return print("Testing")
